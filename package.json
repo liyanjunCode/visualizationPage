@@ -3,8 +3,20 @@
   "version": "1.0.0",
   "description": "visual Page building",
   "scripts": {
-    "start": "webpack-dev-server --config ./build/commonConfig/webpack.dev.js",
-    "build": "webpack --config ./build/commonConfig/webpack.pro.js"
+    "start": "webpack-dev-server --config ./build/webpackConfig/webpack.dev.js",
+    "build": "webpack --config ./build/webpackConfig/webpack.pro.js",
+    "prestart:front": "node ./build/build.js -t front",
+    "prestart:manage": "node ./build/build.js -t manage",
+    "prestart:all": "node ./build/build.js -t all",
+    "prebuild:front": "node ./build/build.js -t front",
+    "prebuild:manage": "node ./build/build.js -t manage",
+    "prebuild:all": "node ./build/build.js -t all",
+    "start:front": "npm run start",
+    "start:manage": "npm run start",
+    "start:all": "npm run start",
+    "build:front": "npm run build",
+    "build:manage": "npm run build",
+    "build:all": "npm run build"
   },
   "repository": {
     "type": "git",

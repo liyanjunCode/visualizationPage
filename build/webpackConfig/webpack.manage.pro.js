@@ -1,18 +1,18 @@
-
 const path = require("path");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
-  entry: path.resolve(__dirname, "../../frontPage/src/index.js"),
+  mode: "production",
+  entry: path.resolve(__dirname, "../../managePage/src/index.js"),
   output: {
     filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "../../dist/frontPage"),
-    publicPath: "/"
+    path: path.resolve(__dirname, "../../dist/managePage"),
+    // publicPath: "/images"
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../../public/index.html"),
-      title: "前端页面",
+      title: "管理页面",
       filename: "index.html",
       minify: true,
     })
