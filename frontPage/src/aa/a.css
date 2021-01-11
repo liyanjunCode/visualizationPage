@@ -1,0 +1,13 @@
+body {
+  background:red;
+  transform: translate3d(-50%,0,0);
+  animation: aa 0.3s infinite;
+};
+@keyframes aa {
+  0% {
+    background: blue;
+  }
+  100% {
+    background: red;
+  }
+}

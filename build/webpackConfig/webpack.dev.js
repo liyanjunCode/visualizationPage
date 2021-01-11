@@ -20,15 +20,27 @@ module.exports = merge(baseConfig, {
     progress: true, //开启进度条
   },
   module: {
-    // rules: [
-    //   {
-    //     test: /\.css$/i,
-    //     use: [
-    //       'style-loader',
-    //       'css-loader'
-    //     ],
-    //   },
-    // ]
+    rules: [
+      {
+        test: /\.css$/i,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader"
+        ],
+      },
+      {
+        test: /\.scss$/i,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
+        ],
+      },
+    ]
   },
   plugins: [
     ...pageConfig.plugins

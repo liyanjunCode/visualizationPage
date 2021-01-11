@@ -7,7 +7,6 @@ module.exports = {
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "../../dist/managePage"),
-    // publicPath: "/images"
   },
   plugins: [
     new HtmlWebpackPlugin({

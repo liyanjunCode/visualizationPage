@@ -1,6 +1,6 @@
-import { aa } from "./aa/index.ts"
-import "./aa/a.scss";
-import imgsrc from "../assets/111.png";
+import { aa } from "./aa/index.js"
+require("./aa/a.css");
+// import imgsrc from "../assets/111.png";
 // console.log("front")
 
 // function* bb () {
