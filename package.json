@@ -28,16 +28,26 @@
     "url": "https://github.com/liyanjunCode/visualizationPage/issues"
   },
   "homepage": "https://github.com/liyanjunCode/visualizationPage#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@babel/runtime-corejs3": "^7.12.5"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "commander": "^6.2.1",
-    "css-loader": "^5.0.1",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.1",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.1.0",
+    "sass": "^1.32.2",
+    "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.14",
     "url-loader": "^4.1.1",
     "webpack": "^5.11.1",
     "webpack-cli": "^3.3.12",

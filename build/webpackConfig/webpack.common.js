@@ -10,6 +10,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
@@ -19,6 +27,43 @@ module.exports = {
             },
           },
         ],
+      },
+      // 转换es6等语法
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.css$/i,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader"
+        ],
+      },
+      {
+        test: /\.scss$/i,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 2,
+            },
+          },
+          "postcss-loader",
+          "sass-loader"
+        ],
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: "ts-loader"
       }
     ]
   },

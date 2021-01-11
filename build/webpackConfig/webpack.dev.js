@@ -20,15 +20,15 @@ module.exports = merge(baseConfig, {
     progress: true, //开启进度条
   },
   module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [
-          'style-loader',
-          'css-loader'
-        ],
-      },
-    ]
+    // rules: [
+    //   {
+    //     test: /\.css$/i,
+    //     use: [
+    //       'style-loader',
+    //       'css-loader'
+    //     ],
+    //   },
+    // ]
   },
   plugins: [
     ...pageConfig.plugins
