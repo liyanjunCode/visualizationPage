@@ -14,6 +14,6 @@ const str = "saodmskamdsadmnam";
 //   ["a", "b", "c"].includes("a")
 //   // randomStr()
 // }
-const libs: string = "2222"
-console.log(libs, "111")
+// const libs: string = "2222"
+// console.log(libs, "111")
 
