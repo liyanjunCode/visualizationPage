@@ -1,7 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const dirPath = path.resolve(__dirname, "../build.json")
 process.env.BUILD_CONFIG = fs.readFileSync(dirPath, { encoding: "utf-8" });
 fs.unlinkSync(dirPath);
@@ -39,30 +40,6 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            },
-            {
-                test: /\.css$/i,
-                exclude: /node_modules/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "postcss-loader"
-                ],
-            },
-            {
-                test: /\.scss$/i,
-                exclude: /node_modules/,
-                use: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                        options: {
-                            importLoaders: 2,
-                        },
-                    },
-                    "postcss-loader",
-                    "sass-loader"
-                ],
             },
             // {
             //     test: /\.tsx?$/,
