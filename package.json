@@ -1,62 +1,68 @@
 {
-  "name": "visualizationpage",
-  "version": "1.0.0",
-  "description": "visual Page building",
-  "scripts": {
-    "start": "webpack-dev-server --config ./build/webpackConfig/webpack.dev.js",
-    "build": "webpack --config ./build/webpackConfig/webpack.pro.js",
-    "prestart:front": "node ./build/build.js -t front",
-    "prestart:manage": "node ./build/build.js -t manage",
-    "prestart:all": "node ./build/build.js -t all",
-    "prebuild:front": "node ./build/build.js -t front",
-    "prebuild:manage": "node ./build/build.js -t manage",
-    "prebuild:all": "node ./build/build.js -t all",
-    "start:front": "npm run start",
-    "start:manage": "npm run start",
-    "start:all": "npm run start",
-    "build:front": "npm run build",
-    "build:manage": "npm run build",
-    "build:all": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/liyanjunCode/visualizationPage.git"
-  },
-  "author": "liyanjun",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liyanjunCode/visualizationPage/issues"
-  },
-  "homepage": "https://github.com/liyanjunCode/visualizationPage#readme",
-  "dependencies": {
-    "@babel/runtime": "^7.12.5",
-    "@babel/runtime-corejs3": "^7.12.5",
-    "html-withimg-loader": "^0.1.16"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "autoprefixer": "^10.2.1",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^3.0.0",
-    "commander": "^6.2.1",
-    "css-loader": "^4.3.0",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.1",
-    "mini-css-extract-plugin": "^1.3.3",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss": "^8.2.4",
-    "postcss-loader": "^4.1.0",
-    "sass": "^1.32.2",
-    "sass-loader": "^10.1.0",
-    "style-loader": "^2.0.0",
-    "ts-loader": "^8.0.14",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.11.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.1",
-    "webpack-merge": "^5.7.3"
-  }
+    "name": "visualizationpage",
+    "version": "1.0.0",
+    "description": "visual Page building",
+    "scripts": {
+        "start": "webpack-dev-server --config ./build/webpackConfig/webpack.dev.js",
+        "build": "webpack --config ./build/webpackConfig/webpack.pro.js",
+        "prestart:front": "node ./build/build.js -t front",
+        "prestart:manage": "node ./build/build.js -t manage",
+        "prestart:all": "node ./build/build.js -t all",
+        "prebuild:front": "node ./build/build.js -t front",
+        "prebuild:manage": "node ./build/build.js -t manage",
+        "prebuild:all": "node ./build/build.js -t all",
+        "start:front": "npm run start",
+        "start:manage": "npm run start",
+        "start:all": "npm run start",
+        "build:front": "npm run build",
+        "build:manage": "npm run build",
+        "build:all": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/liyanjunCode/visualizationPage.git"
+    },
+    "author": "liyanjun",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/liyanjunCode/visualizationPage/issues"
+    },
+    "homepage": "https://github.com/liyanjunCode/visualizationPage#readme",
+    "dependencies": {
+        "@babel/runtime": "^7.12.5",
+        "vue-next": "0.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-transform-runtime": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/runtime-corejs3": "^7.12.5",
+        "autoprefixer": "^10.2.1",
+        "babel-loader": "^8.2.2",
+        "clean-webpack-plugin": "^3.0.0",
+        "commander": "^6.2.1",
+        "css-loader": "^4.3.0",
+        "css-minimizer-webpack-plugin": "^1.2.0",
+        "eslint": "^7.17.0",
+        "eslint-webpack-plugin": "^2.4.1",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^4.5.1",
+        "html-withimg-loader": "^0.1.16",
+        "mini-css-extract-plugin": "^1.3.3",
+        "postcss": "^8.2.4",
+        "postcss-loader": "^4.1.0",
+        "sass": "^1.32.2",
+        "sass-loader": "^10.1.0",
+        "style-loader": "^2.0.0",
+        "ts-loader": "^8.0.14",
+        "typescript": "^4.1.3",
+        "uglifyjs-webpack-plugin": "^2.2.0",
+        "url-loader": "^4.1.1",
+        "vue-loader": "^15.9.6",
+        "vue-template-compiler": "^2.6.12",
+        "webpack": "^5.11.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.1",
+        "webpack-merge": "^5.7.3"
+    }
 }

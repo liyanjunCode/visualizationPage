@@ -1,0 +1,12 @@
+ body {
+  background:red;
+};
+.a {
+    counter-reset: 1;
+}
+.b{
+    color: red;
+}
+.q{
+    background-color: red;
+}

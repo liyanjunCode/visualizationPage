@@ -1,9 +1,11 @@
 const { merge } = require("webpack-merge");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const frontConfig = require("./webpack.front.pro.js");
 const manageConfig = require("./webpack.manage.pro.js");
 const baseConfig = require("./webpack.common.js");
 const { flag } = require("../config.js");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const commonConfig = {
     module: {
         rules: [
@@ -35,10 +37,16 @@ const commonConfig = {
     ],
     optimization: {
         minimizer: [
-            new OptimizeCssAssetsPlugin(),
+            new CssMinimizerPlugin({
+                sourceMap: true,
+            }),
             new UglifyJsPlugin({
                 sourceMap: true,
-                extractComments: false,
+                uglifyOptions: {
+                    output: {
+                        comments: false,
+                    },
+                },
             })
         ]
     }
